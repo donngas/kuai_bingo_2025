@@ -10,7 +10,7 @@ publicSh = gc.open_by_key(getenv('PUBLIC_SHEET_KEY'))
 ws2 = adminSh.get_worksheet(0)
 ws3 = publicSh.get_worksheet(0)
 
-DEBUG = True
+DEBUG = False
 
 def task_index_to_a1(index):
     if not 1 <= index <= 16:
