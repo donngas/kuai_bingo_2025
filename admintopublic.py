@@ -15,12 +15,14 @@ DEBUG = False
 def task_index_to_a1(index):
     if not 1 <= index <= 16:
         raise ValueError("Task index must be between 1 and 16.")
-    start_col = ord('B')
-    idx = index - 1  # zero-based
+    start_col = ord('B')  # Column B = index 0
+    start_row = 4         # B4 is the new top-left
+
+    idx = index - 1
     row = idx // 4
     col = idx % 4
     col_letter = chr(start_col + col)
-    row_number = 2 + row
+    row_number = start_row + row
     return f"{col_letter}{row_number}"
 
 
@@ -38,11 +40,17 @@ def update_public_with_admin():
         print(logtimer(), f"[ATP] DEBUG: transposed column: {allAdminValTrans}")
 
     #Count ever completed tasks
-    for i in allAdminValTrans[1]:
-        if i != '':
-            everCompleted.append(allAdminValTrans[1].index(i)+1)
-    print(logtimer(), "[ATP] Counted all ever completed tasks.")
-    print(logtimer(), f"[ATP] Completed tasks are: {everCompleted}")
+    try:
+
+        for i in allAdminValTrans[1]:
+            if i != '':
+                everCompleted.append(allAdminValTrans[1].index(i)+1)
+        print(logtimer(), "[ATP] Counted all ever completed tasks.")
+        print(logtimer(), f"[ATP] Completed tasks are: {everCompleted}")
+
+    except Exception as e:
+
+        print(logtimer(), f"[ATP] ERROR: {e}. Most likely no entries in admin yet.")
 
     #Update public sheet online
     for i in everCompleted:

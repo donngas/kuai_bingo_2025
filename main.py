@@ -25,7 +25,7 @@ def main():
 
             print(logtimer(), f"[MAIN] ERROR: {e}")
 
-        time.sleep(10)
+        time.sleep(45)
 
 if __name__ == "__main__":
     print(logtimer(), "[MAIN] Script initiated.")
