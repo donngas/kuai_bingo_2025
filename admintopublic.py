@@ -55,7 +55,7 @@ def update_public_with_admin():
     #Update public sheet online
     for i in everCompleted:
         ws3.format(task_index_to_a1(i), {"backgroundColor": {"red": 0.0, "green": 36.0, "blue": 0.0}})
-    ws3.update_cell(9, 2, "마지막 자동 업데이트: " + str(logtimer()))
+    ws3.update_cell(9, 2, "마지막 자동 업데이트: " + str(timestamp()))
     print(logtimer(), "[ATP] Successfully updated mission status for public bingo sheet.")
 
 if __name__ == "__main__":
