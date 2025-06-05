@@ -19,3 +19,6 @@ def to_a1(row, col):
 
 def logtimer():
     return strftime("%Y-%m-%d %H:%M:%S", localtime())
+
+def timestamp():
+    return strftime("%Y년 %m월 %d일 %H시 %M분 %S초", localtime())
