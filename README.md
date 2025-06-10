@@ -13,3 +13,4 @@ This is a real-time automation tool that updates and displays completion status 
 
 ## Log
 - Successfully serviced for KUAI Bingo Event 2025(June 5, 2025 - June 7, 2025), continuously and in real-time.
+- [Public bingo status sheet](https://docs.google.com/spreadsheets/d/1wBV3FgkoCbsiNpDkDemK85WXgfDtZVk655P5dIHTqHM/edit?gid=0#gid=0)
