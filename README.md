@@ -4,6 +4,7 @@ This is a real-time automation tool that updates and displays completion status 
 ## Requirements
 - Everything in requirements.txt
 - PC/Server/(Cloud) Virtual Machine with Python runtime for real-time service
+- Google service bot for Google Sheets & its authentication key file.
 
 ## Modules
 - main.py: Performs update loop in set time interval.
